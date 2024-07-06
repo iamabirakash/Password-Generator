@@ -16,7 +16,7 @@ function App() {
     let pass = ""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     if (numberAllowed) str += "1234567890"
-    if (charAllowed) str += "!@#$%^&*?~`{}[]+_-="
+    if (charAllowed) str += "!@#$%^&*?~`+_-="
 
     for (let i = 1; i <= length; i++){
       let char = Math.floor(Math.random() * str.length + 1)
@@ -59,7 +59,7 @@ function App() {
         </div>
 
         <div className='flex item-center'>
-          <input type="checkbox" defaultChecked={charAllowed} id="charInput" onChange={() => {setNumberAllowed((prev) => !prev)}} className='mr-1 cursor-pointer'/>
+          <input type="checkbox" defaultChecked={charAllowed} id="charInput" onChange={() => {setCharAllowed((prev) => !prev)}} className='mr-1 cursor-pointer'/>
           <label className='start '>Character</label>
         </div>
       </div>
